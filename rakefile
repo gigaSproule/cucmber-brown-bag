@@ -1,0 +1,16 @@
+task :default => [:install_dependencies, :cucumber]
+
+task :install_dependencies do
+	system "gem install watir-webdriver"
+	system "gem install cucumber"
+end
+
+task :cucumber do
+	fork do
+		system "shotgun app.rb"
+	end
+
+	system "cucumber features/"
+
+	system "killall ruby"
+end
