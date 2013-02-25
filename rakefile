@@ -1,8 +1,7 @@
 task :default => [:install_dependencies, :cucumber]
 
 task :install_dependencies do
-	system "gem install watir-webdriver"
-	system "gem install cucumber"
+	system "gem install watir-webdriver cucumber shotgun sinatra"
 end
 
 task :cucumber do
