@@ -1,8 +1,4 @@
-task :default => [:install_dependencies, :cucumber]
-
-task :install_dependencies do
-	system "gem install watir-webdriver cucumber shotgun sinatra"
-end
+task :default => [:cucumber]
 
 task :cucumber do
 	fork do
